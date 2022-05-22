@@ -10,11 +10,11 @@ public class Carro {
         this.velocidadeAtual = velocidadeAtual;
     }
 
-    String cor;
-    String marca;
-    String modelo;
-    boolean ligado;
-    int velocidadeAtual;
+    private String cor;
+    private String marca;
+    private String modelo;
+    private boolean ligado;
+    private int velocidadeAtual;
 
     public void acelerar() {
         this.velocidadeAtual += 10;
