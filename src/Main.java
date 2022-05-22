@@ -33,7 +33,7 @@ public class Main {
 
         int escolha;
 
-        while(carro.ligado) { // Enquanto meu carro estiver ligado ->
+        while(carro.estaLigado()) { // Enquanto meu carro estiver ligado ->
             System.out.println();
             System.out.println("Escolha uma operação:");
             System.out.println("1 - Acelerar");

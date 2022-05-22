@@ -1,6 +1,7 @@
 public class Carro {
     public Carro() {
     }
+
     public Carro(String cor, String marca, String modelo, boolean ligado, int velocidadeAtual) {
         this.cor = cor;
         this.marca = marca;
@@ -36,5 +37,9 @@ public class Carro {
     public void desligar() {
         System.out.println("Voce desligou o carro!");
         this.ligado = false;
+    }
+
+    public boolean estaLigado() {
+        return ligado;
     }
 }
