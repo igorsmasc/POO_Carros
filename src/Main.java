@@ -27,6 +27,48 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Tudo ok!");
+        Scanner entrada = new Scanner(System.in);
+
+        Carro carro = new Carro();
+        carro.cor = "Vermelho";
+        carro.marca = "Fiat";
+        carro.modelo = "Uno";
+        carro.ligado = true;
+        carro.velocidadeAtual = 0;
+
+        int escolha;
+
+        while(carro.ligado) { // Enquanto meu carro estiver ligado ->
+            System.out.println();
+            System.out.println("Escolha uma operação:");
+            System.out.println("1 - Acelerar");
+            System.out.println("2 - Frear");
+            System.out.println("3 - Estado atual");
+            System.out.println("0 - Desligar");
+            System.out.printf("Operacao: ");
+            System.out.println();
+            escolha = entrada.nextInt(); // Entrada do usuario
+
+            if(escolha == 1) {
+                carro.velocidadeAtual += 10;
+                System.out.println("Voce acelerou e a velocidade atual é: " + carro.velocidadeAtual);
+            } else if(escolha == 2) {
+                carro.velocidadeAtual -= 10;
+                System.out.println("Voce freou e a velocidade atual é: " + carro.velocidadeAtual);
+            } else if(escolha == 3) {
+                System.out.println("O estado atual do carro é:");
+                System.out.println("Cor: " + carro.cor);
+                System.out.println("Marca: " + carro.marca);
+                System.out.println("Modelo: " + carro.modelo);
+                System.out.println("Velocidade atual: " + carro.velocidadeAtual);
+            } else if(escolha == 0) {
+                System.out.println("Voce desligou o carro!");
+                carro.ligado = false;
+            } else {
+                System.out.println("Escolha invalida, tente novamente");
+            }
+        }
+
+        entrada.close();
     }
 }
