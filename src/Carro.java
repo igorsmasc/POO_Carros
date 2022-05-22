@@ -16,13 +16,13 @@ public class Carro {
     private boolean ligado;
     private int velocidadeAtual;
 
-    public void acelerar() {
-        this.velocidadeAtual += 10;
+    public void acelerar(int velocidadeAMais) {
+        this.velocidadeAtual += velocidadeAMais;
         System.out.println("Voce acelerou e a velocidade atual é: " + this.velocidadeAtual);
     }
 
-    public void frear() {
-        this.velocidadeAtual -= 10;
+    public void frear(int velocidadeAMenos) {
+        this.velocidadeAtual -= velocidadeAMenos;
         System.out.println("Voce freou e a velocidade atual é: " + this.velocidadeAtual);
     }
 

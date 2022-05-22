@@ -45,9 +45,9 @@ public class Main {
             escolha = entrada.nextInt(); // Entrada do usuario
 
             if(escolha == 1) {
-                carro.acelerar();
+                carro.acelerar(10);
             } else if(escolha == 2) {
-                carro.frear();
+                carro.frear(10);
             } else if(escolha == 3) {
                 carro.mostrarEstadoAtual();
             } else if(escolha == 0) {
