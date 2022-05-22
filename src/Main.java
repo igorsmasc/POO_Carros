@@ -50,20 +50,13 @@ public class Main {
             escolha = entrada.nextInt(); // Entrada do usuario
 
             if(escolha == 1) {
-                carro.velocidadeAtual += 10;
-                System.out.println("Voce acelerou e a velocidade atual é: " + carro.velocidadeAtual);
+                carro.acelerar();
             } else if(escolha == 2) {
-                carro.velocidadeAtual -= 10;
-                System.out.println("Voce freou e a velocidade atual é: " + carro.velocidadeAtual);
+                carro.frear();
             } else if(escolha == 3) {
-                System.out.println("O estado atual do carro é:");
-                System.out.println("Cor: " + carro.cor);
-                System.out.println("Marca: " + carro.marca);
-                System.out.println("Modelo: " + carro.modelo);
-                System.out.println("Velocidade atual: " + carro.velocidadeAtual);
+                carro.mostrarEstadoAtual();
             } else if(escolha == 0) {
-                System.out.println("Voce desligou o carro!");
-                carro.ligado = false;
+                carro.desligar();
             } else {
                 System.out.println("Escolha invalida, tente novamente");
             }
