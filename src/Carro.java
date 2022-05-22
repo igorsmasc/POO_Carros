@@ -1,4 +1,14 @@
 public class Carro {
+    public Carro() {
+    }
+    public Carro(String cor, String marca, String modelo, boolean ligado, int velocidadeAtual) {
+        this.cor = cor;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ligado = ligado;
+        this.velocidadeAtual = velocidadeAtual;
+    }
+
     String cor;
     String marca;
     String modelo;

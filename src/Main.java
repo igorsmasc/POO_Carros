@@ -29,12 +29,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
 
-        Carro carro = new Carro();
-        carro.cor = "Vermelho";
-        carro.marca = "Fiat";
-        carro.modelo = "Uno";
-        carro.ligado = true;
-        carro.velocidadeAtual = 0;
+        Carro carro = new Carro("Vermelho", "Fiat", "Uno", true, 0);
 
         int escolha;
 
