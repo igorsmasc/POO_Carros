@@ -16,12 +16,10 @@ import java.util.Scanner;
  * - Motrar estado atual
  *
  * Regras:
- * - Só podemos desligar o carro quando ele parar (velocidadeAtual = 0)
  * - Só podemos realizar as ações com o carro ligado
+ * - Só podemos desligar o carro quando ele parar (velocidadeAtual = 0)
  * - A velocidade máxima do nosso carro é de 100km/h
  * - Não existe velocidade negativa
- * - Acelerar + 10km/h (Aumenta 10)
- * - Frear - 10km/h (Diminui 10)
  *
  */
 

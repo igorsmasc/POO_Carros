@@ -17,13 +17,27 @@ public class Carro {
     private int velocidadeAtual;
 
     public void acelerar(int velocidadeAMais) {
-        this.velocidadeAtual += velocidadeAMais;
-        System.out.println("Voce acelerou e a velocidade atual é: " + this.velocidadeAtual);
+        if(velocidadeAMais + this.velocidadeAtual > 100) {
+            this.velocidadeAtual = 100;
+            System.out.printf("Você atingiu a velocidade máxima de %dkm/h", velocidadeAtual);
+        } else {
+            this.velocidadeAtual += velocidadeAMais;
+            System.out.printf("Voce acelerou e a velocidade atual é de %dkm/h", this.velocidadeAtual);
+        }
     }
 
     public void frear(int velocidadeAMenos) {
-        this.velocidadeAtual -= velocidadeAMenos;
-        System.out.println("Voce freou e a velocidade atual é: " + this.velocidadeAtual);
+        if(this.velocidadeAtual == 0) {
+            System.out.println("O carro já está parado!");
+        } else {
+            if(velocidadeAMenos >= velocidadeAtual) {
+                this.velocidadeAtual = 0;
+            } else {
+                this.velocidadeAtual -= velocidadeAMenos;
+            }
+
+            System.out.printf("Voce freou e a velocidade atual é de %dkm/h", this.velocidadeAtual);
+        }
     }
 
     public void mostrarEstadoAtual() {
@@ -35,8 +49,13 @@ public class Carro {
     }
 
     public void desligar() {
-        System.out.println("Voce desligou o carro!");
-        this.ligado = false;
+        if(this.velocidadeAtual > 0) {
+            System.out.println("ERRO!");
+            System.out.println("Não é possível desligar um carro em movimento!");
+        } else {
+            System.out.println("Voce desligou o carro!");
+            this.ligado = false;
+        }
     }
 
     public boolean estaLigado() {
